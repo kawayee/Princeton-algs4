@@ -92,7 +92,8 @@ def build_lps(pattern: str) -> list[int]:
     """
     构建 KMP 算法中的 lps 数组。
     lps 的含义：
-        lps[i] 表示 pattern[0:i+1] 这个子串中，最长的“相等真前缀和真后缀”的长度。
+        lps[i] 表示 pattern[0:i+1] 这个子串中，最长的“相等真前缀和真后缀”的长度。pattern[0:i+1]是python中的切片写法(左闭右开)，等价于数学中的闭区间pattern[0,i]。
+        lps[i] 表示 以索引 i 结尾的子串的最长相等真前后缀长度，这个子串包含了从索引 0 开始，一直到索引 i（包含 i）的所有字符。
 
     例如：
         pattern = "ababaca"
